@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/tejas-portfolio",
-  assetPrefix: "/tejas-portfolio/",
 };
 
 export default nextConfig;
