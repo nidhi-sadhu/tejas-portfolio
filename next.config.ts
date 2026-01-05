@@ -1,12 +1,12 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: '/tejas-shah-react-portfolio',
-  assetPrefix: '/tejas-shah-react-portfolio/',
-}
+  basePath: "/tejas-portfolio",
+  assetPrefix: "/tejas-portfolio/",
+};
 
-export default nextConfig
+export default nextConfig;
