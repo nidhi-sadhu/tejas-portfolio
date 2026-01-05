@@ -1,0 +1,115 @@
+.illustrationSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInRight 1s ease-out 0.5s both;
+}
+
+.illustration {
+    width: 100%;
+    max-width: 550px;
+    filter: drop-shadow(0 12px 35px rgba(24, 69, 59, 0.2));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.illustration:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 16px 45px rgba(24, 69, 59, 0.3));
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.floatingMolecule {
+    animation: floatSmooth 4s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(24, 69, 59, 0.25));
+}
+
+.floatingMolecule2 {
+    animation: floatSmooth 5s ease-in-out infinite 1s;
+    filter: drop-shadow(0 4px 8px rgba(24, 69, 59, 0.25));
+}
+
+@keyframes floatSmooth {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}
+
+.illustrationWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.illustrationWrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(24, 69, 59, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 1024px) {
+    .illustrationSection {
+        order: -1;
+    }
+
+    .illustration {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .illustration {
+        max-width: 350px;
+        filter: drop-shadow(0 10px 30px rgba(24, 69, 59, 0.15));
+    }
+
+    .illustration:hover {
+        transform: translateY(-5px);
+        filter: drop-shadow(0 12px 35px rgba(24, 69, 59, 0.25));
+    }
+}
+
+@media (max-width: 480px) {
+    .illustration {
+        max-width: 280px;
+    }
+}

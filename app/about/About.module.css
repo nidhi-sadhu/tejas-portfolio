@@ -1,0 +1,366 @@
+.aboutSection {
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    padding-top: calc(52px);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.titleWrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+}
+
+.titleUnderline {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #18453B, #2d6d5f, #18453B, transparent);
+    margin: 0 auto;
+    border-radius: 2px;
+    animation: expandWidth 0.8s ease-out 0.3s both;
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 4rem;
+    align-items: start;
+    animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+.photoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeInLeft 0.8s ease-out 0.5s both;
+}
+
+.photoWrapper {
+    height: 480px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photoWrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.profilePhoto {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photoWrapper:hover .profilePhoto {
+    transform: scale(1.03);
+}
+
+.socialLinks {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    background: rgba(24, 69, 59, 0.08);
+    border: 2px solid rgba(24, 69, 59, 0.2);
+    border-radius: 50%;
+    color: #18453B;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeInScale 0.5s ease-out forwards;
+}
+
+.socialLink:nth-child(1) {
+    animation-delay: 0.7s;
+}
+
+.socialLink:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.socialLink:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.socialLink:nth-child(4) {
+    animation-delay: 1.0s;
+}
+
+.socialLink:hover {
+    background: linear-gradient(135deg, #18453B, #2d6d5f);
+    border-color: #18453B;
+    color: white;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 16px rgba(24, 69, 59, 0.3);
+}
+
+.socialIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 2rem;
+    animation: fadeInRight 0.8s ease-out 0.6s both;
+}
+
+.description {
+    color: #2d2d2d;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+.description p {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    opacity: 0;
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    transition: transform 0.3s ease;
+}
+
+.description p:nth-child(1) {
+    animation-delay: 0.8s;
+}
+
+.description p:nth-child(2) {
+    animation-delay: 1.0s;
+}
+
+.description p:hover {
+    transform: translateX(4px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes expandWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 120px;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .aboutContent {
+        grid-template-columns: 340px 1fr;
+        gap: 3rem;
+    }
+
+    .photoWrapper {
+        height: 480px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutSection {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 2.5rem;
+    }
+
+    .titleUnderline {
+        width: 100px;
+    }
+
+    .titleWrapper {
+        margin-bottom: 3rem;
+    }
+
+    .aboutContent {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .photoContainer {
+        max-width: 380px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .photoWrapper {
+        height: 450px;
+    }
+
+    .textContent {
+        text-align: left;
+    }
+
+    .description {
+        font-size: 1.0625rem;
+    }
+
+    .backgroundImage {
+        opacity: 0.08;
+    }
+}
+
+@media (max-width: 480px) {
+    .photoContainer {
+        max-width: 300px;
+    }
+
+    .photoWrapper {
+        height: 400px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .socialLinks {
+        gap: 0.5rem;
+    }
+
+    .socialLink {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .socialIcon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+}
+
+@media print {
+    .stickyBackground {
+        display: none;
+    }
+
+    .aboutSection {
+        background: white;
+        padding-top: 2rem;
+    }
+
+    .photoWrapper {
+        box-shadow: none;
+    }
+
+    .description p {
+        opacity: 1;
+        animation: none;
+    }
+}

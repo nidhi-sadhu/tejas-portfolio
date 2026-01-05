@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Clean MSU Green, White, Black Theme */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #f1f3f0;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f8faf7;
+    --bg-accent-subtle: rgba(24, 69, 59, 0.04);
+
+    /* Professional Text Colors */
+    --text-primary: #1a1a1a;
+    --text-secondary: #2d2d2d;
+    --text-muted: #5a5a5a;
+    --text-light: #888888;
+
+    /* MSU Green Accent Colors */
+    --accent-main: #18453B;
+    --accent-light: #2d6d5f;
+    --accent-bright: #3d8a75;
+    --accent-dark: #0f2e27;
+    --accent-muted: rgba(24, 69, 59, 0.15);
+
+    /* Supporting Colors */
+    --success-green: #18453B;
+    --black: #000000;
+    --white: #ffffff;
+
+    /* Borders */
+    --border-light: #e5e7e4;
+    --border-medium: #d1d5cf;
+    --border-accent: rgba(24, 69, 59, 0.25);
+    --border-strong: #18453B;
+
+    /* Clean Neutral Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Transparent Background - Global Background Shows Through */
+    background: transparent;
+    color: var(--text-primary);
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    padding-top: 72px;
+    /* Header height */
+}
+
+/* Section scroll offset for fixed header */
+section {
+    scroll-margin-top: 72px;
+    position: relative;
+    background: transparent;
+    /* Let background show through */
+}
+
+/* NUNITO TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 0.875rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: var(--accent-main);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    color: var(--accent-dark);
+    border-bottom-color: var(--accent-main);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 64px;
+        font-size: 0.9375rem;
+    }
+
+    section {
+        scroll-margin-top: 64px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px;
+    }
+
+    section {
+        scroll-margin-top: 60px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding-top: 0;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

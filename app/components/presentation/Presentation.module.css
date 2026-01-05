@@ -1,0 +1,245 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    overflow: visible;
+    max-width: 100%;
+}
+
+.presentationCard {
+    display: flex;
+    gap: 0.625rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e5e7e4;
+    padding: 0.875rem 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    overflow: visible;
+    max-width: 100%;
+}
+
+.presentationCard:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.presentationCard:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.presentationCard:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.presentationCard:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.presentationCard:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.presentationCard:nth-child(6) {
+    animation-delay: 0.55s;
+}
+
+.presentationCard:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.presentationCard:nth-child(8) {
+    animation-delay: 0.65s;
+}
+
+.presentationCard:nth-child(9) {
+    animation-delay: 0.7s;
+}
+
+.presentationCard:nth-child(10) {
+    animation-delay: 0.75s;
+}
+
+.presentationCard:nth-child(11) {
+    animation-delay: 0.8s;
+}
+
+.presentationCard:nth-child(12) {
+    animation-delay: 0.85s;
+}
+
+.presentationCard:nth-child(13) {
+    animation-delay: 0.9s;
+}
+
+.presentationCard:hover {
+    border-bottom-color: #18453B;
+    transform: translateX(4px);
+}
+
+.number {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #18453B;
+    font-family: 'Nunito', sans-serif;
+    flex-shrink: 0;
+    min-width: 1.5rem;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    overflow: visible;
+}
+
+.title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.authors {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #2d2d2d;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.details {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #18453B;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.year {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #18453B;
+    font-family: 'Nunito', sans-serif;
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding: 0.3rem 0.75rem;
+    background: rgba(24, 69, 59, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.presentationCard:hover .year {
+    background: rgba(24, 69, 59, 0.15);
+    color: #2d6d5f;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: 0.5rem;
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .presentationCard {
+        padding: 0.75rem 0;
+        gap: 0.75rem;
+        overflow: visible;
+    }
+
+    .title {
+        font-size: 0.8125rem;
+    }
+
+    .authors {
+        font-size: 0.75rem;
+    }
+
+    .details {
+        font-size: 0.75rem;
+    }
+
+    .year {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.625rem;
+    }
+
+    .number {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 0.5rem;
+        padding-right: 0;
+    }
+
+    .presentationCard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.625rem 0;
+        gap: 0.5rem;
+    }
+
+    .number {
+        min-width: auto;
+    }
+
+    .title {
+        font-size: 0.75rem;
+    }
+
+    .authors {
+        font-size: 0.6875rem;
+    }
+
+    .details {
+        font-size: 0.6875rem;
+    }
+
+    .year {
+        font-size: 0.6875rem;
+        padding: 0.2rem 0.5rem;
+        align-self: flex-start;
+    }
+}
+
+@media print {
+    .presentationCard {
+        background: white;
+        border-bottom: 1px solid #e5e7e4;
+        page-break-inside: avoid;
+        opacity: 1;
+        animation: none;
+    }
+}

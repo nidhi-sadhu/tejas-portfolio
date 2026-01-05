@@ -1,0 +1,351 @@
+.container {
+    width: 100%;
+    position: relative;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #18453B, #2d6d5f, #18453B);
+    border-radius: 1px;
+}
+
+.expCard {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e5e7e4;
+    padding: 0.625rem 0 0.625rem 0;
+    margin-bottom: 0.625rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    overflow: visible;
+    max-width: 100%;
+}
+
+.expCard:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.expCard:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.expCard:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.expCard:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.expCard:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+.expCard:hover {
+    border-bottom-color: #18453B;
+    transform: translateX(4px);
+}
+
+.expCard::before {
+    content: '';
+    position: absolute;
+    left: -2.375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.875rem;
+    height: 0.875rem;
+    background: #ffffff;
+    border: 3px solid #18453B;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.expCard:hover::before {
+    border-color: #2d6d5f;
+    transform: translateY(-50%) scale(1.15);
+}
+
+.current::before {
+    background: linear-gradient(135deg, #18453B, #2d6d5f);
+    border-color: #2d6d5f;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+    overflow: visible;
+    max-width: 100%;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    overflow: visible;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.institution {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.manager {
+    font-size: 0.875rem;
+    color: #2d2d2d;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.managerLabel {
+    font-weight: 700;
+    color: #18453B;
+}
+
+.advisor {
+    font-size: 0.875rem;
+    color: #2d2d2d;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.advisorLabel {
+    font-weight: 700;
+    color: #18453B;
+}
+
+.description {
+    font-size: 0.875rem;
+    color: #2d2d2d;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    padding: 0.5rem 0.75rem;
+    background: rgba(24, 69, 59, 0.08);
+    border-radius: 6px;
+    border-left: 3px solid #18453B;
+    margin-top: 0.25rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.expCard:hover .description {
+    background: rgba(24, 69, 59, 0.12);
+    border-left-color: #2d6d5f;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.375rem;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.dateRange {
+    font-size: 0.875rem;
+    color: #18453B;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    background: rgba(24, 69, 59, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.expCard:hover .dateRange {
+    background: rgba(24, 69, 59, 0.15);
+    color: #2d6d5f;
+    transform: scale(1.05);
+}
+
+.location {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1.75rem;
+        padding-right: 0;
+        overflow: visible;
+    }
+
+    .container::before {
+        left: 0.5rem;
+        width: 2px;
+    }
+
+    .expCard {
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+        overflow: visible;
+    }
+
+    .expCard::before {
+        left: -1.375rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-width: 2px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        overflow: visible;
+    }
+
+    .leftColumn {
+        overflow: visible;
+    }
+
+    .rightColumn {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .institution {
+        font-size: 0.875rem;
+    }
+
+    .location {
+        font-size: 0.875rem;
+    }
+
+    .dateRange {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 0;
+    }
+
+    .container::before {
+        left: 0.375rem;
+    }
+
+    .expCard {
+        padding: 0.875rem 0;
+    }
+
+    .expCard::before {
+        left: -1.525rem;
+        width: 0.625rem;
+        height: 0.625rem;
+    }
+
+    .title {
+        font-size: 0.9375rem;
+    }
+
+    .institution {
+        font-size: 0.8125rem;
+    }
+
+    .manager,
+    .advisor,
+    .description {
+        font-size: 0.8125rem;
+    }
+
+    .location {
+        font-size: 0.8125rem;
+    }
+
+    .dateRange {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.625rem;
+    }
+}
+
+@media print {
+    .container::before {
+        background: #333;
+    }
+
+    .expCard::before {
+        border-color: #333;
+    }
+
+    .current::before {
+        background: #333;
+    }
+
+    .expCard {
+        background: white;
+        border-bottom: 1px solid #e5e7e4;
+        page-break-inside: avoid;
+        opacity: 1;
+        animation: none;
+    }
+}

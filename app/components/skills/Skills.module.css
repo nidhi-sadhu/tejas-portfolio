@@ -1,0 +1,242 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    overflow: visible;
+    max-width: 100%;
+}
+
+.categoryCard {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e5e7e4;
+    padding: 1rem 0 1.5rem 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    overflow: visible;
+    max-width: 100%;
+}
+
+.categoryCard:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.categoryCard:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.categoryCard:hover {
+    border-bottom-color: #18453B;
+    transform: translateX(4px);
+}
+
+.categoryHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: 1rem;
+    overflow: visible;
+}
+
+.categoryIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #18453B;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.categoryCard:hover .categoryIcon {
+    color: #2d6d5f;
+    transform: scale(1.1);
+}
+
+.categoryTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.3;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: visible;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    overflow: visible;
+}
+
+.sectionTitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #18453B;
+    margin: 0;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.sectionTitle::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background: linear-gradient(135deg, #18453B, #2d6d5f);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    overflow: visible;
+}
+
+.skillTag {
+    display: inline-block;
+    padding: 0.5rem 0.625rem;
+    background: rgba(24, 69, 59, 0.08);
+    border: 1px solid rgba(24, 69, 59, 0.2);
+    border-radius: 8px;
+    color: #2d2d2d;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+    cursor: default;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.skillTag:hover {
+    background: rgba(24, 69, 59, 0.15);
+    border-color: #18453B;
+    color: #18453B;
+    transform: translateY(-2px) scale(1.05);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: 1.5rem;
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .categoryCard {
+        padding: 1rem 0;
+        overflow: visible;
+    }
+
+    .categoryHeader {
+        margin-bottom: 1rem;
+    }
+
+    .categoryIcon {
+        width: 1.375rem;
+        height: 1.375rem;
+    }
+
+    .categoryTitle {
+        font-size: 1.125rem;
+    }
+
+    .sections {
+        gap: 1rem;
+    }
+
+    .section {
+        gap: 0.625rem;
+    }
+
+    .sectionTitle {
+        font-size: 0.8125rem;
+    }
+
+    .skillTags {
+        gap: 0.5rem;
+    }
+
+    .skillTag {
+        padding: 0.375rem 0.875rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-right: 0;
+    }
+
+    .categoryCard {
+        padding: 0.875rem 0;
+    }
+
+    .categoryHeader {
+        gap: 0.625rem;
+    }
+
+    .categoryTitle {
+        font-size: 1rem;
+    }
+
+    .sections {
+        gap: 0.875rem;
+    }
+
+    .sectionTitle {
+        font-size: 0.75rem;
+    }
+
+    .skillTag {
+        padding: 0.3rem 0.75rem;
+        font-size: 0.6875rem;
+    }
+
+    .sectionTitle::before {
+        width: 0.375rem;
+        height: 0.375rem;
+    }
+}
+
+@media print {
+    .categoryCard {
+        background: white;
+        border-bottom: 1px solid #e5e7e4;
+        page-break-inside: avoid;
+        opacity: 1;
+        animation: none;
+    }
+
+    .skillTag {
+        border-color: #cbd5e0;
+    }
+}

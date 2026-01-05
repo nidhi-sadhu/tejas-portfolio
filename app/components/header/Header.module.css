@@ -1,0 +1,247 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #18453B 0%, #2d6d5f 100%);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.scrolled {
+    background: linear-gradient(135deg, #0f2e27 0%, #18453B 100%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(24, 69, 59, 0.2);
+}
+
+.headerContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.logoWrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nameLink {
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: opacity 0.2s ease;
+}
+
+.nameLink:hover {
+    opacity: 0.85;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.nameLink:hover .name {
+    color: #3d8a75;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: 100%;
+}
+
+.navLink {
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3d8a75, #ffffff);
+    border-radius: 2px 2px 0 0;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover {
+    color: #3d8a75;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.navLinkActive {
+    color: #3d8a75;
+}
+
+.navLinkActive::after {
+    width: 100%;
+    background: #3d8a75;
+}
+
+.mobileNav {
+    max-height: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #18453B 0%, #2d6d5f 100%);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.mobileNavOpen {
+    max-height: 300px;
+    padding: 1rem 0;
+}
+
+.mobileNavLink {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.mobileNavLink:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: #3d8a75;
+    padding-left: 2.5rem;
+}
+
+.mobileNavLinkActive {
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: #3d8a75;
+    color: #3d8a75;
+}
+
+.mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.mobileMenuButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #3d8a75;
+}
+
+.mobileMenuButton:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .headerContent {
+        padding: 1rem 1.5rem;
+        height: 64px;
+    }
+
+    .mobileNav {
+        top: 64px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobileMenuButton {
+        display: block;
+    }
+
+    .name {
+        font-size: 1.25rem;
+    }
+
+    .logoWrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoSection {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerContent {
+        padding: 1rem;
+        height: 60px;
+    }
+
+    .mobileNav {
+        top: 60px;
+    }
+
+    .name {
+        font-size: 1.125rem;
+    }
+
+    .logoWrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .mobileNavLink {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+}

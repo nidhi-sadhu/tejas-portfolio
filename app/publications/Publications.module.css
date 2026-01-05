@@ -1,0 +1,323 @@
+.publicationsSection {
+    min-height: 100vh;
+    padding-top: calc(52px);
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pageHeader {
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.pageTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+}
+
+.titleUnderline {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #18453B, #2d6d5f, #18453B, transparent);
+    margin: 0 auto;
+    border-radius: 2px;
+    animation: expandWidth 0.8s ease-out 0.3s both;
+}
+
+.publicationsList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.publicationCard {
+    display: flex;
+    gap: 0.625rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e5e7e4;
+    padding: 0 0 1.5rem 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.publicationCard:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.publicationCard:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.publicationCard:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.publicationCard:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.publicationCard:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+.publicationCard:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.publicationCard:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+.publicationCard:nth-child(8) {
+    animation-delay: 1.2s;
+}
+
+.publicationCard:nth-child(9) {
+    animation-delay: 1.3s;
+}
+
+.publicationCard:nth-child(10) {
+    animation-delay: 1.4s;
+}
+
+.publicationCard:nth-child(11) {
+    animation-delay: 1.5s;
+}
+
+.publicationCard:nth-child(12) {
+    animation-delay: 1.6s;
+}
+
+.publicationCard:nth-child(13) {
+    animation-delay: 1.7s;
+}
+
+.publicationCard:hover {
+    border-bottom-color: #18453B;
+    transform: translateX(4px);
+}
+
+.number {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #18453B;
+    font-family: 'Nunito', sans-serif;
+    flex-shrink: 0;
+    min-width: 2rem;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+}
+
+.authors {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #2d2d2d;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+}
+
+.venue {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #18453B;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+}
+
+.year {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #18453B;
+    font-family: 'Nunito', sans-serif;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 120px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .publicationsSection {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .pageTitle {
+        font-size: 2.5rem;
+    }
+
+    .titleUnderline {
+        width: 100px;
+    }
+
+    .pageHeader {
+        margin-bottom: 3rem;
+    }
+
+    .publicationsList {
+        gap: 1.5rem;
+    }
+
+    .publicationCard {
+        gap: 0.75rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .authors {
+        font-size: 0.875rem;
+    }
+
+    .venue {
+        font-size: 0.8125rem;
+    }
+
+    .year {
+        font-size: 0.9375rem;
+    }
+
+    .number {
+        font-size: 0.9375rem;
+        min-width: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .pageTitle {
+        font-size: 2rem;
+    }
+
+    .titleUnderline {
+        width: 80px;
+        height: 3px;
+    }
+
+    .pageHeader {
+        margin-bottom: 2rem;
+    }
+
+    .publicationsList {
+        gap: 1.25rem;
+    }
+
+    .publicationCard {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .number {
+        min-width: auto;
+    }
+
+    .title {
+        font-size: 0.9375rem;
+    }
+
+    .authors {
+        font-size: 0.8125rem;
+    }
+
+    .venue {
+        font-size: 0.75rem;
+    }
+
+    .year {
+        font-size: 0.875rem;
+        align-self: flex-start;
+    }
+}
+
+@media print {
+    .publicationsSection {
+        background: white;
+        padding-top: 2rem;
+    }
+
+    .publicationCard {
+        border-bottom: 1px solid #e5e7e4;
+        page-break-inside: avoid;
+        opacity: 1;
+        animation: none;
+    }
+}
