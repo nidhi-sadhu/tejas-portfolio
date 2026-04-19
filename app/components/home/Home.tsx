@@ -33,8 +33,8 @@ export default function HomePage() {
                         </div>
                     </div>
                     <p className={styles.description}>
-                        Passionate about molecular design, computational chemistry, and polymer science.
-                        Exploring the intersection of chemistry and technology to advance scientific research.
+                        Passionate about computational biochemistry, structural biology and drug discovery.
+                        Exploring the intersection of biology and technology to advance scientific research.
                     </p>
                     {/* <div className={styles.buttonGroup}>
                         <a href="/documents/TVS_CV.pdf" download="TVS_CV.pdf" className={styles.btnPrimary}>
