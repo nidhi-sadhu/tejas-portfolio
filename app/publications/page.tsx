@@ -8,23 +8,12 @@ export default function Publications() {
       title:
         "Decoding the Conformational Dynamics and Hyperactivity of Histone H3K36 N-Methyltransferase in Oncogenic Mutations via tICA and Markov State Modeling",
       authors: "Shah, T., Heidari, S., Rydzewski, J., and Torabifard, H.",
-      venue: "biorXiv.",
+      venue: "Journal of Chemical Information and Modeling 66 (20), 13482-13492",
       year: 2026,
-      link: "https://www.biorxiv.org/content/10.64898/2026.06.03.730013v1.abstract",
+      link: "https://pubs.acs.org/jcisd8/article-abstract/66/20/13482/5443622/Decoding-Conformational-Dynamics-and-Hyperactivity",
     },
-
     {
       id: 15,
-      title:
-        "Small Structural Variations, Large Functional Consequences: Comparative Analysis Reveals Structural Control of Ubiquitylation Site Selection by BRCA1/BARD1",
-      authors:
-        "Heidari, S., Lightle, C., Herrington, L., Shah, T., Hossain, F., Morcos, F., Weintraub, S. T., Stewart, M. D., and Torabifard, H.",
-      venue: "bioRxiv",
-      year: 2026,
-      link: "https://www.biorxiv.org/content/10.64898/2026.06.26.734868v1.abstract",
-    },
-    {
-      id: 14,
       title:
         "Structure and conformational dynamics of the Pseudomonas CbrA transceptor",
       authors:
@@ -32,6 +21,16 @@ export default function Publications() {
       venue: "Protein Science, 35(9), e70775.",
       year: 2026,
       link: "https://onlinelibrary.wiley.com/doi/10.1002/pro.70775",
+    },
+    {
+      id: 14,
+      title:
+        "Small Structural Variations, Large Functional Consequences: Comparative Analysis Reveals Structural Control of Ubiquitylation Site Selection by BRCA1/BARD1",
+      authors:
+        "Heidari, S., Lightle, C., Herrington, L., Shah, T., Hossain, F., Morcos, F., Weintraub, S. T., Stewart, M. D., and Torabifard, H.",
+      venue: "bioRxiv, 2026.06. 26.734868",
+      year: 2026,
+      link: "https://www.biorxiv.org/content/10.64898/2026.06.26.734868v1.abstract",
     },
     {
       id: 13,
