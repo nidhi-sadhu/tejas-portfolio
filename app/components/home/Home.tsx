@@ -6,7 +6,7 @@ import Illustration from '../illustration/Illustration';
 
 export default function HomePage() {
     const [currentTitle, setCurrentTitle] = useState(0);
-    const titles = ["Computational Chemist", "Organic Chemist", "Polymer Chemist"];
+    const titles = ["Computational Chemist", "Structural Biologist", "Organic Chemist", "Polymer Chemist"];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -34,7 +34,7 @@ export default function HomePage() {
                     </div>
                     <p className={styles.description}>
                         Passionate about computational biochemistry, structural biology and drug discovery.
-                        Exploring the intersection of biology and technology to advance scientific research.
+                        Exploring the intersection of biology and computation to advance our understanding of how proteins function.
                     </p>
                     {/* <div className={styles.buttonGroup}>
                         <a href="/documents/TVS_CV.pdf" download="TVS_CV.pdf" className={styles.btnPrimary}>
