@@ -38,7 +38,7 @@ export default function Publications() {
         "Fluorescent Poly(ε-Caprolactone)s Micelles for Anticancer Drug Delivery and Bioimaging",
       authors:
         "Babanyinah, G., Bhadran, A., Polara, H., Shah, T., Biewer, M. C., and Stefan, M. C.",
-      venue: "Biomacromolecules, 2025, 26, 3651-3665.",
+      venue: "Biomacromolecules 26 (6), 3651-3665",
       year: 2025,
       link: "https://pubs.acs.org/doi/abs/10.1021/acs.biomac.5c00262",
     },
@@ -48,7 +48,7 @@ export default function Publications() {
         "Improved Drug Delivery through Amide-Functionalized Polycaprolactones: Enhanced Loading Capacity and Sustained Drug Release",
       authors:
         "Polara, H., Shah, T., Babanyinah, G., Wang, H., Bhadran, A., Biewer, M. C., Torabifard, H., and Stefan, M. C.",
-      venue: "Biomacromolecules, 2025, 26, 3213-3223.",
+      venue: "Biomacromolecules, 2025, 26 (5), 3213-3223.",
       year: 2025,
       link: "https://pubs.acs.org/doi/abs/10.1021/acs.biomac.5c00280",
     },
@@ -59,7 +59,7 @@ export default function Publications() {
       authors:
         "Shah, T., Polara, H., Bhadran, A., Babanyinah, G., Wang, H., Grabowski, G., Biewer, M. C., Torabifard, H., and Stefan, M. C.",
       venue:
-        "Journal of Materials Chemistry B, 2025, 13, 4166-4178. (†equally contributed)",
+        "Journal of Materials Chemistry B, 2025, 13 (13), 4166-4178. (†equally contributed)",
       year: 2025,
       link: "https://pubs.rsc.org/en/content/articlelanding/2025/tb/d4tb02789b/unauth",
     },
@@ -68,7 +68,7 @@ export default function Publications() {
       title:
         "Dynamics of amphiphilic poly(ε-caprolactone) micelles with doxorubicin and transition temperature predictions using all-atom molecular dynamics simulation",
       authors: "Shah, T., Stefan, M. C., and Torabifard, H.",
-      venue: "Journal of Physical Chemistry B, 2024, 128, 11981-11991.",
+      venue: "Journal of Physical Chemistry B, 2024, 128 (48), 11981-11991.",
       year: 2024,
       link: "https://pubs.rsc.org/en/content/articlehtml/2024/sc/d4sc01625d",
     },
@@ -87,7 +87,7 @@ export default function Publications() {
         "Synthesis and Characterization of Two New Holmium Metal-Organic Frameworks",
       authors:
         "Abbas, M., Murtaza, D., Joy, M., Sheybani, S., Shah, T., Balkus, K.",
-      venue: "CrystEngComm, 2024, 26, 5567-5573.",
+      venue: "CrystEngComm, 2024, 26 (39), 5567-5573.",
       year: 2024,
       link: "https://pubs.rsc.org/en/content/articlelanding/2024/ce/d4ce00592a/unauth",
     },
@@ -98,7 +98,7 @@ export default function Publications() {
       authors:
         "Babanyinah, G., Bhadran, A., Wang, H., Polara, H., Shah, T., Biewer, M. C., and Stefan, M. C.",
       venue:
-        "Chemical Science, 2024, 15, 9987-10001. (Featured on Journal Cover)",
+        "Chemical Science, 2024, 15 (26), 9987-10001. (Featured on Journal Cover)",
       year: 2024,
       link: "https://pubs.rsc.org/en/content/articlehtml/2024/sc/d4sc01625d",
     },
@@ -118,7 +118,7 @@ export default function Publications() {
         "Reversible cross-linked thermoresponsive polycaprolactone micelles for enhanced stability and controlled release",
       authors:
         "Bhadran, A., Polara, H., Calubaquib, E., Wang, H., Babanyinah, G., Shah, T., Anderson, P., Saleh, M., Biewer, M. C., and Stefan, M. C.",
-      venue: "Biomacromolecules, 2023, 24, 12, 5823-5835.",
+      venue: "Biomacromolecules, 2023, 24 (12), 5823-5835.",
       year: 2023,
       link: "https://pubs.acs.org/doi/abs/10.1021/acs.biomac.3c00832",
     },
@@ -136,7 +136,7 @@ export default function Publications() {
       title: "Functional polycaprolactones for drug delivery applications",
       authors:
         "Bhadran, A., Polara, H., Shah, T., Babanyinah, G., Tashiny, S., Biewer, M, C., and Stefan, M, C.",
-      venue: "Pharmaceutics, 2023, 15, 7, 1977. (Invited Perspective)",
+      venue: "Pharmaceutics, 2023, 15 (7), 1977. (Invited Perspective)",
       year: 2023,
       link: "https://www.mdpi.com/1999-4923/15/7/1977",
     },
@@ -155,7 +155,7 @@ export default function Publications() {
       title:
         "A glimpse of biodegradable polymers and their biomedical applications",
       authors: "Shah, T., and Vasava, D. V.",
-      venue: "e-Polymers, 2019, 19, 1, 385-410.",
+      venue: "e-Polymers, 2019, 19 (1), 385-410.",
       year: 2019,
       link: "https://www.degruyterbrill.com/document/doi/10.1515/epoly-2019-0041/html",
     },
